@@ -1,0 +1,18 @@
+
+<h1 style="text-align: center">我要提问</h1>
+<p style="text-align: center"><a href="/con/show">返回首页</a></p>
+<form action="/con/add2">
+    <table class="table table-striped table-hover table-bordered">
+        <tr>
+            <td>问题:</td>
+            <td><input type="text"  name="title"></td>
+        </tr>
+        <tr>
+            <td>问题描述:</td>
+            <td><textarea name="detaildesc" cols="20" rows="3"></textarea></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center"> <input type="submit" value="保存问题"></td>
+        </tr>
+    </table>
+</form>

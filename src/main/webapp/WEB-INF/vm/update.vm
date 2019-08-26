@@ -1,0 +1,27 @@
+<h1 style="text-align: center">问题回答页面</h1>
+<table class="table table-striped table-hover table-bordered">
+    <tr>
+        <td>问题：</td>
+        <td>$!questions.title</td>
+    </tr>
+    <tr>
+        <td>问题描述:</td>
+        <td>$!questions.detaildesc</td>
+    </tr>
+        #foreach($!ans in $!list)
+            <tr>
+                <td>网友回答：</td>
+            <td>$!ans.anscontent <p>回答时间：$!date.format('yyyy-MM-dd HH:mm:ss ',$!ans.ansdate)</p></td>
+            </tr>
+        #end
+    <form action="/con/add3">
+        <input type="hidden" name="qid" value="$!questions.id">
+        <tr>
+            <td>我来回答：</td>
+            <td><textarea name="anscontent" cols="20" rows="3"></textarea></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center"><input type="submit" value="提交回答"></td>
+        </tr>
+    </form>
+</table>
